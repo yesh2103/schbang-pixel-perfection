@@ -50,11 +50,11 @@ const Hero = () => {
             {/* Text Content */}
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
-                <h1 className="text-display">
-                  Your Creative, Media &{" "}
-                  <span className="text-accent">Technology</span>{" "}
-                  Transformation Partner
-                </h1>
+        <h1 className="text-display">
+          Your Creative &{" "}
+          <span className="text-accent">Technology</span>{" "}
+          Transformation Partner
+        </h1>
                 <p className="text-large text-gray-700 max-w-xl">
                   We're a team of 1000+ Specialists delivering award-winning work 
                   for 300+ brands worldwide, 8 years and counting!
@@ -82,7 +82,7 @@ const Hero = () => {
             {/* Visual Content */}
             <div className="relative animate-scale-in">
               <div className="grid grid-cols-2 gap-4 lg:gap-6">
-                {/* Abstract Design */}
+                {/* Blue Abstract */}
                 <div className="space-y-4">
                   <div className="aspect-square rounded-2xl overflow-hidden bg-blue-600 hover-lift">
                     <img 
@@ -91,13 +91,11 @@ const Hero = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="h-32 bg-gradient-to-br from-schbang-yellow to-schbang-yellow-dark rounded-2xl hover-lift" />
                 </div>
                 
-                {/* Team Image */}
+                {/* Phone Mockup */}
                 <div className="space-y-4 mt-8">
-                  <div className="h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl hover-lift" />
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden hover-lift">
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden hover-lift bg-gray-100">
                     <img 
                       src={heroImage} 
                       alt="Creative team collaboration"
@@ -116,26 +114,42 @@ const Hero = () => {
         <div className="scrolling-text">
           {/* First set */}
           <div className="flex items-center space-x-8 pr-8">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-center space-x-8">
-                <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
-                  {service}
-                </span>
-                <div className="w-2 h-2 rounded-full bg-schbang-yellow flex-shrink-0" />
-              </div>
-            ))}
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
           </div>
           
           {/* Duplicate for seamless loop */}
           <div className="flex items-center space-x-8 pr-8">
-            {services.map((service, index) => (
-              <div key={`duplicate-${index}`} className="flex items-center space-x-8">
-                <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
-                  {service}
-                </span>
-                <div className="w-2 h-2 rounded-full bg-schbang-yellow flex-shrink-0" />
-              </div>
-            ))}
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
+            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+              IT'S TIME TO CREATE A SCHBANG
+            </span>
+            <div className="text-2xl">✦</div>
           </div>
         </div>
       </div>

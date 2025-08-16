@@ -1,6 +1,13 @@
-import { Target, Users, Award, Zap } from "lucide-react";
+import { Target, Users, Award, Zap, ArrowRight } from "lucide-react";
 
 const Mission = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const values = [
     {
       icon: Target,
@@ -29,14 +36,26 @@ const Mission = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-section-title mb-6 animate-fade-in-up">
-            What Defines Us
+            What defines us
           </h2>
-          <p className="text-large text-gray-700 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            We're not just another agency. We're transformation partners who blend creativity, 
-            technology, and strategic thinking to create experiences that matter. Our mission 
-            is to help brands navigate the complex digital landscape while staying true to 
-            their core values.
+          <h3 className="text-hero mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            We're challengers at heart and builders by nature.
+          </h3>
+          <p className="text-large text-gray-700 animate-fade-in-up max-w-4xl" style={{ animationDelay: "0.2s" }}>
+            <strong>We're brand builders at heart, creators by design, tech enthusiasts in practice, and integrated at our core.</strong>
           </p>
+          <p className="text-body text-gray-600 mt-6 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.3s" }}>
+            We're on a mission to take the very best of Indian creative talent to the world. Driven by a ferocious hunger to create tangible impact for your business, we work with in-house specialists, industry partners and technology leaders to push the boundaries of creativity and put your brand on the global stage.
+          </p>
+          <div className="mt-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <button 
+              className="btn-accent group"
+              onClick={() => scrollToSection("culture")}
+            >
+              Dive into our culture
+              <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">

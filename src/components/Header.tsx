@@ -60,7 +60,7 @@ const Header = () => {
             >
               Schbang
               <span className="text-xs lg:text-sm font-normal ml-2 text-gray-600">
-                .Production
+                .Influencers
               </span>
             </button>
           </div>

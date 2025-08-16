@@ -181,9 +181,9 @@ const Footer = () => {
       <div className="border-t border-gray-800 py-6">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-small text-gray-400">
-              © 2024 Schbang Production. All rights reserved.
-            </p>
+          <p className="text-small text-gray-400">
+            © 2024 Schbang Influencers. All rights reserved.
+          </p>
             <div className="flex items-center gap-6">
               <button className="text-small text-gray-400 hover:text-schbang-yellow transition-colors duration-300">
                 Privacy Policy
