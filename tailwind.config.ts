@@ -60,6 +60,11 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 			},
+			boxShadow: {
+				'soft': '0 2px 8px -2px hsl(0 0% 0% / 0.1)',
+				'medium': '0 4px 16px -4px hsl(0 0% 0% / 0.1)',
+				'large': '0 8px 32px -8px hsl(0 0% 0% / 0.15)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
