@@ -71,7 +71,7 @@ const FeaturedWork = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="card-work animate-fade-in-up"
+              className="card-work group animate-fade-in-up"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <div className="card-work-image">
