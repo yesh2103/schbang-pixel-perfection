@@ -102,8 +102,8 @@ export default {
 					'100%': { transform: 'scale(1) translateY(0)' }
 				},
 				'pulse-glow': {
-					'0%, 100%': { boxShadow: '0 0 0 0 hsl(var(--accent) / 0.7)' },
-					'50%': { boxShadow: '0 0 20px 10px hsl(var(--accent) / 0)' }
+					'0%, 100%': { boxShadow: '0 0 0 0 hsl(var(--accent) / 0.4)' },
+					'50%': { boxShadow: '0 0 40px 15px hsl(var(--accent) / 0)' }
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },

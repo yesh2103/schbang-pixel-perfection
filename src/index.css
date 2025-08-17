@@ -9,12 +9,12 @@
   :root {
     /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 0 0% 9%;
     
-    /* Schbang Yellow Accent */
+    /* Refined Color Palette */
     --schbang-yellow: 48 100% 50%;
-    --schbang-yellow-light: 48 100% 88%;
-    --schbang-yellow-dark: 45 100% 35%;
+    --schbang-yellow-light: 48 100% 95%;
+    --schbang-yellow-dark: 45 100% 40%;
     
     /* Grays for depth */
     --gray-50: 0 0% 98%;
@@ -27,16 +27,16 @@
     --gray-900: 0 0% 9%;
     
     /* UI Colors */
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 9%;
     --accent: 48 100% 50%;
-    --accent-foreground: 0 0% 0%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --accent-foreground: 0 0% 9%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 40%;
+    --border: 0 0% 92%;
+    --input: 0 0% 96%;
     --ring: 48 100% 50%;
     --radius: 0.5rem;
     
@@ -99,15 +99,15 @@
 @layer components {
   /* Buttons */
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all duration-300 inline-flex items-center gap-3 shadow-soft hover:shadow-medium;
   }
   
   .btn-accent {
-    @apply bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium hover:bg-yellow-400 transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-accent text-accent-foreground px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:shadow-large transition-all duration-300 inline-flex items-center gap-3;
   }
   
   .btn-outline {
-    @apply border-2 border-current text-foreground px-6 py-3 rounded-full font-medium hover:bg-foreground hover:text-background transition-all duration-300 inline-flex items-center gap-2;
+    @apply border-2 border-current text-foreground px-8 py-4 rounded-full font-semibold hover:bg-foreground hover:text-background transition-all duration-300 inline-flex items-center gap-3 hover:shadow-medium;
   }
   
   /* Cards */
@@ -145,15 +145,15 @@
   
   /* Hover Animations */
   .hover-lift {
-    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-large;
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-large hover:scale-[1.02];
   }
   
   .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
+    @apply transition-transform duration-400 hover:scale-110;
   }
   
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)];
+    @apply transition-all duration-400 hover:shadow-[0_0_40px_hsl(var(--accent)/0.4)] hover:scale-[1.02];
   }
   
   /* Logo Animation */

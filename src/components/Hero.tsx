@@ -30,12 +30,12 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-background" />
       
       {/* Announcement Bar */}
-      <div className="relative z-10 bg-schbang-yellow-light border-b border-schbang-yellow py-3">
+      <div className="relative z-10 bg-gradient-to-r from-orange-50 to-red-50 border-b border-orange-200 py-3">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-small font-medium">
-            🎉 <strong>Schbang Production</strong> is now part of the global network.{" "}
+          <p className="text-small font-medium text-gray-800">
+            🎉 <strong>Addikt</strong> is now part of the Schbang Network.{" "}
             <button 
-              className="text-schbang-yellow-dark hover:underline font-semibold"
+              className="text-red-600 hover:underline font-semibold transition-colors duration-200"
               onClick={() => scrollToSection("about")}
             >
               Read More Here.
@@ -119,46 +119,38 @@ const Hero = () => {
       </div>
 
       {/* Scrolling Services Banner */}
-      <div className="relative z-10 py-8 bg-foreground text-background overflow-hidden">
+      <div className="relative z-10 py-6 bg-primary text-primary-foreground overflow-hidden">
         <div className="scrolling-text">
           {/* First set */}
-          <div className="flex items-center space-x-8 pr-8">
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+          <div className="flex items-center space-x-12 pr-12">
+            <span className="text-xl lg:text-2xl font-black whitespace-nowrap uppercase tracking-widest">
               IT'S TIME TO CREATE A SCHBANG
             </span>
-            <div className="text-2xl">✦</div>
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+            <div className="text-xl">✶</div>
+            <span className="text-xl lg:text-2xl font-black whitespace-nowrap uppercase tracking-widest">
               IT'S TIME TO CREATE A SCHBANG
             </span>
-            <div className="text-2xl">✦</div>
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+            <div className="text-xl">✶</div>
+            <span className="text-xl lg:text-2xl font-black whitespace-nowrap uppercase tracking-widest">
               IT'S TIME TO CREATE A SCHBANG
             </span>
-            <div className="text-2xl">✦</div>
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
-              IT'S TIME TO CREATE A SCHBANG
-            </span>
-            <div className="text-2xl">✦</div>
+            <div className="text-xl">✶</div>
           </div>
           
           {/* Duplicate for seamless loop */}
-          <div className="flex items-center space-x-8 pr-8">
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+          <div className="flex items-center space-x-12 pr-12">
+            <span className="text-xl lg:text-2xl font-black whitespace-nowrap uppercase tracking-widest">
               IT'S TIME TO CREATE A SCHBANG
             </span>
-            <div className="text-2xl">✦</div>
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+            <div className="text-xl">✶</div>
+            <span className="text-xl lg:text-2xl font-black whitespace-nowrap uppercase tracking-widest">
               IT'S TIME TO CREATE A SCHBANG
             </span>
-            <div className="text-2xl">✦</div>
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
+            <div className="text-xl">✶</div>
+            <span className="text-xl lg:text-2xl font-black whitespace-nowrap uppercase tracking-widest">
               IT'S TIME TO CREATE A SCHBANG
             </span>
-            <div className="text-2xl">✦</div>
-            <span className="text-2xl lg:text-3xl font-bold whitespace-nowrap uppercase tracking-wide">
-              IT'S TIME TO CREATE A SCHBANG
-            </span>
-            <div className="text-2xl">✦</div>
+            <div className="text-xl">✶</div>
           </div>
         </div>
       </div>

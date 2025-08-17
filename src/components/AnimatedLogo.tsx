@@ -18,8 +18,8 @@ const AnimatedLogo = () => {
         <span className="text-2xl lg:text-3xl font-black tracking-tight">
           Schbang
         </span>
-        <span className="text-xs lg:text-sm font-normal ml-2 text-gray-600">
-          .Influencers
+        <span className="text-xs lg:text-sm font-normal ml-2 text-muted-foreground">
+          .Production
         </span>
       </div>
       {isAnimating && (
