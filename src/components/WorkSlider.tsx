@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const WorkSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -83,11 +84,13 @@ const WorkSlider = () => {
     <section className="section-padding bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-section-title mb-6 animate-fade-in-up">
-            Our latest work
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-section-title mb-6">
+              Our latest work
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {/* Mobile Slider */}
         <div className="lg:hidden">
@@ -144,22 +147,22 @@ const WorkSlider = () => {
               {projects.map((project, index) => (
                 <div key={project.id} className="space-y-4">
                   <div 
-                    className={`transition-all duration-500 ${
-                      index === currentSlide ? "opacity-100 scale-100" : "opacity-60 scale-95"
+                    className={`transition-all duration-700 group ${
+                      index === currentSlide ? "opacity-100 scale-100" : "opacity-60 scale-95 hover:opacity-80"
                     }`}
                   >
-                    <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 hover-lift">
+                    <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 hover-lift cursor-pointer transition-all duration-500 hover:shadow-large">
                       <img 
                         src={project.images[0]} 
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
-                    <div className="aspect-[4/3] rounded-xl overflow-hidden hover-lift">
+                    <div className="aspect-[4/3] rounded-xl overflow-hidden hover-lift cursor-pointer transition-all duration-500 hover:shadow-large">
                       <img 
                         src={project.images[1]} 
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                     </div>
                   </div>
@@ -171,20 +174,22 @@ const WorkSlider = () => {
             </div>
 
             {/* Featured Project Title */}
-            <div className="text-center mb-8">
-              <h3 className="text-hero max-w-4xl mx-auto">
-                {projects[currentSlide].title}
-              </h3>
-              <div className="text-large text-gray-600 mt-4">
-                0{currentSlide + 1} / 0{projects.length}
+            <ScrollReveal delay={300}>
+              <div className="text-center mb-8">
+                <h3 className="text-hero max-w-4xl mx-auto transition-all duration-500">
+                  {projects[currentSlide].title}
+                </h3>
+                <div className="text-large text-gray-600 mt-4">
+                  0{currentSlide + 1} / 0{projects.length}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Navigation */}
             <div className="flex justify-center items-center gap-4">
               <button 
                 onClick={prevSlide}
-                className="p-4 rounded-full bg-background shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-1"
+                className="p-4 rounded-full bg-background shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-2 hover:scale-110"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
@@ -194,8 +199,8 @@ const WorkSlider = () => {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`text-xl font-bold transition-colors duration-300 ${
-                      index === currentSlide ? "text-accent" : "text-gray-400"
+                    className={`text-xl font-bold transition-all duration-300 hover:scale-125 ${
+                      index === currentSlide ? "text-accent animate-pulse-glow" : "text-gray-400 hover:text-accent"
                     }`}
                   >
                     {index + 1}
@@ -205,7 +210,7 @@ const WorkSlider = () => {
               
               <button 
                 onClick={nextSlide}
-                className="p-4 rounded-full bg-background shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-1"
+                className="p-4 rounded-full bg-background shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-2 hover:scale-110"
               >
                 <ChevronRight className="h-6 w-6" />
               </button>

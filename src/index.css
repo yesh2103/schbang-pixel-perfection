@@ -40,9 +40,10 @@
     --ring: 48 100% 50%;
     --radius: 0.5rem;
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s ease-out;
+  /* Animations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease-out;
+  --bounce-ease: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
     /* Shadows */
     --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.1);
@@ -144,12 +145,41 @@
   
   /* Hover Animations */
   .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-2;
+    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-large;
   }
   
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-105;
   }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--accent)/0.3)];
+  }
+  
+  /* Logo Animation */
+  .logo-pulse {
+    @apply animate-pulse-glow;
+  }
+  
+  /* Text Animations */
+  .text-reveal {
+    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+  }
+  
+  .text-reveal.active {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  /* Stagger Animations */
+  .stagger-fade > * {
+    @apply opacity-0 translate-y-4;
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+  
+  .stagger-fade > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-fade > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-fade > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-fade > *:nth-child(4) { animation-delay: 0.4s; }
   
   /* Grid Layouts */
   .work-grid {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import AnimatedLogo from "./AnimatedLogo";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,14 +55,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <button
-              className="text-2xl lg:text-3xl font-black tracking-tight"
-              onClick={() => scrollToSection("hero")}
-            >
-              Schbang
-              <span className="text-xs lg:text-sm font-normal ml-2 text-gray-600">
-                .Influencers
-              </span>
+            <button onClick={() => scrollToSection("hero")}>
+              <AnimatedLogo />
             </button>
           </div>
 

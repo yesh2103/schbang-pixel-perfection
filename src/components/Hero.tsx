@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import heroAbstract from "@/assets/hero-abstract.jpg";
+import ScrollReveal from "./ScrollReveal";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -48,63 +49,71 @@ const Hero = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
             {/* Text Content */}
-            <div className="space-y-8 animate-fade-in-up">
-              <div className="space-y-6">
-        <h1 className="text-display">
-          Your Creative &{" "}
-          <span className="text-accent">Technology</span>{" "}
-          Transformation Partner
-        </h1>
-                <p className="text-large text-gray-700 max-w-xl">
-                  We're a team of 1000+ Specialists delivering award-winning work 
-                  for 300+ brands worldwide, 8 years and counting!
-                </p>
-              </div>
+            <div className="space-y-8">
+              <ScrollReveal delay={200}>
+                <div className="space-y-6">
+                  <h1 className="text-display">
+                    Your Creative, <span className="text-accent animate-pulse-glow">Media</span> & Technology Transformation Partner
+                  </h1>
+                  <p className="text-large text-gray-700 max-w-xl">
+                    We're a team of 1000+ Specialists delivering award-winning work 
+                    for 300+ brands worldwide, 8 years and counting!
+                  </p>
+                </div>
+              </ScrollReveal>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button 
-                  className="btn-accent group"
-                  onClick={() => scrollToSection("contact")}
-                >
-                  IT'S TIME TO CREATE A SCHBANG
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
-                <button 
-                  className="btn-outline group"
-                  onClick={() => scrollToSection("culture")}
-                >
-                  Dive into Our Culture
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
-              </div>
+              <ScrollReveal delay={400}>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button 
+                    className="btn-accent group hover-glow"
+                    onClick={() => scrollToSection("contact")}
+                  >
+                    IT'S TIME TO CREATE A SCHBANG
+                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
+                  </button>
+                  <button 
+                    className="btn-outline group hover-lift"
+                    onClick={() => scrollToSection("culture")}
+                  >
+                    Dive into Our Culture
+                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110" />
+                  </button>
+                </div>
+              </ScrollReveal>
             </div>
 
             {/* Visual Content */}
-            <div className="relative animate-scale-in">
-              <div className="grid grid-cols-2 gap-4 lg:gap-6">
-                {/* Blue Abstract */}
-                <div className="space-y-4">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-blue-600 hover-lift">
-                    <img 
-                      src={heroAbstract} 
-                      alt="Digital transformation concept"
-                      className="w-full h-full object-cover"
-                    />
+            <ScrollReveal delay={600} direction="right">
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4 lg:gap-6">
+                  {/* Blue Abstract */}
+                  <div className="space-y-4">
+                    <div className="aspect-square rounded-2xl overflow-hidden bg-blue-600 hover-lift animate-float">
+                      <img 
+                        src={heroAbstract} 
+                        alt="Digital transformation concept"
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Phone Mockup */}
+                  <div className="space-y-4 mt-8">
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden hover-lift bg-gray-100" style={{ animationDelay: '1.5s' }}>
+                      <img 
+                        src={heroImage} 
+                        alt="Creative team collaboration"
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                      />
+                    </div>
                   </div>
                 </div>
                 
-                {/* Phone Mockup */}
-                <div className="space-y-4 mt-8">
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden hover-lift bg-gray-100">
-                    <img 
-                      src={heroImage} 
-                      alt="Creative team collaboration"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full animate-bounce-in opacity-80" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-schbang-yellow rounded-full animate-bounce-in opacity-60" style={{ animationDelay: '2.5s' }}></div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>
